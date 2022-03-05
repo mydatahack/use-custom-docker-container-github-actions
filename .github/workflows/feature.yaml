@@ -5,5 +5,22 @@ on:
       - "main"
 
 jobs:
-  run-test-deploy:
+  run-in-container:
     runs-on: ubuntu-latest
+    container: node:16-alpine
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Install
+        run: |
+          yarn install
+
+      - name: Unit Tests
+        run: |
+          yarn test
+
+      - name: Build
+        run: |
+          yarn build

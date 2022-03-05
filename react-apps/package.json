@@ -22,8 +22,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "TZ=UTC react-scripts test --watchAll=false --env=jsdom --no-cache --restoreMocks --runInBand --forceExit",
+    "test:coverage": "TZ=UTC react-scripts test --coverage --watchAll=false --env=jsdom --no-cache --restoreMocks --runInBand --forceExit",
+    "test:dev": "TZ=UTC react-scripts test --watchAll=false --env=jsdom --no-cache --restoreMocks",
+    "test:watch": "TZ=UTC react-scripts test --env=jsdom --no-cache",
+    "test:changed": "TZ=UTC react-scripts test --env=jsdom --no-cache -o --silent"
   },
   "eslintConfig": {
     "extends": [
