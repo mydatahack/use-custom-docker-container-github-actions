@@ -5,6 +5,7 @@ on:
       - main
 jobs:
   run-in-container:
+    runs-on: ubuntu-latest
     container: alpine-node:16
     steps:
       - name: Checkout

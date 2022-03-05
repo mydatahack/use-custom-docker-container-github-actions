@@ -9,6 +9,7 @@ Use this:
 ```yml
 jobs:
   run-in-container:
+    runs-on: ubuntu-latest
     container: alpine-node:16
 ```
 
