@@ -1,0 +1,9 @@
+name: Run Job on a branch
+on:
+  push:
+    branches-ignore:
+      - "main"
+
+jobs:
+  run-test-deploy:
+    runs-on: ubuntu-latest
