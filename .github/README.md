@@ -6,4 +6,4 @@ The action here is only for private use. The recommendation from Github is to st
 
 **Did you forget to run actions/checkout before running your local action?**
 
-We need to run
+We need to add `checkout` action + the folder structure has to `.github/actions/[name-of-your-action]`.
